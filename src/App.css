@@ -1,41 +1,72 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500;700&family=Lato:ital,wght@0,700;1,400&family=Poppins:wght@500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0 none;
+  outline: 0 none;
+  color: #cccccc;
+  --poppins: "Poppins", sans-serif;
+  --lato: "Lato", sans-serif;
+  --hind: "Hind Madurai", sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  background-color: #181a1b;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+ul {
+  list-style: none inside;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: var(--poppins);
+}
+
+h2,
+h3 {
+  font-family: var(--lato);
+}
+
+p,
+button,
+li,
+input {
+  font-family: var(--hind);
+}
+
+.main-cont,
+.input-btn-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-cont {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.input-btn-cont {
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
   }
-  to {
-    transform: rotate(360deg);
+}
+/* Prevent scaling beyond this breakpoint */
+@media (min-width: 1920px) {
+  :root {
+    font-size: 24px;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

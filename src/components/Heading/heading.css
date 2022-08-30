@@ -1,0 +1,31 @@
+.heading > h1 {
+  animation: heading 1000ms 1 forwards ease-in-out;
+  margin-bottom: 0;
+  opacity: 0;
+}
+
+.heading > p {
+  animation: headingparagraph 1000ms 1s forwards ease-in-out;
+  opacity: 0;
+}
+
+@keyframes heading {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes headingparagraph {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
