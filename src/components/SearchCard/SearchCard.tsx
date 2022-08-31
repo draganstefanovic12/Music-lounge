@@ -1,6 +1,6 @@
 import "./searchcard.css";
-import ytLogo from "../../assets/youtube-icon.svg";
 import { Data } from "../../App";
+import { SearchOnSpotify } from "../SearchOnSpotify/SearchOnSpotify";
 
 type SearchCardProps = {
   data: Data;
@@ -16,18 +16,15 @@ export type Recommendation = {
 export const SearchCard = ({ data }: SearchCardProps) => {
   return (
     <div className="search-grid-cont">
-      {data.Similar &&
-        data.Similar.Results.map((card: Recommendation, i: number) => (
-          <div key={i} className="recommendation-cont">
-            <div>
-              <h1>{card.Name}</h1>
-              <a href={card.yUrl}>
-                <img src={ytLogo} alt="" className="yt-logo" />
-              </a>
-            </div>
+      {data.Similar.Results.map((card: Recommendation, i: number) => (
+        <div key={i} className="recommendation-cont">
+          <SearchOnSpotify search={card.Name} />
+          <div>
+            <h1>{card.Name}</h1>
             <p>{card.wTeaser}</p>
           </div>
-        ))}
+        </div>
+      ))}
     </div>
   );
 };

@@ -4,9 +4,22 @@
   opacity: 0;
 }
 
+.disappear {
+  animation: fadeout 500ms 1 forwards ease-in-out;
+}
+
 .heading > p {
   animation: headingparagraph 1000ms 1s forwards ease-in-out;
   opacity: 0;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes heading {

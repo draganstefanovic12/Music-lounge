@@ -6,5 +6,5 @@ type InputProps = {
 };
 
 export const Input = ({ onChange }: InputProps) => {
-  return <input onChange={onChange} />;
+  return <input placeholder="Search..." onChange={onChange} />;
 };

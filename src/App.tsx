@@ -5,6 +5,7 @@ import { Button } from "./components/Button/Button";
 import { Heading } from "./components/Heading/Heading";
 import { useState } from "react";
 import { Recommendation, SearchCard } from "./components/SearchCard/SearchCard";
+import { ChangeTheme } from "./components/ChangeTheme/ChangeTheme";
 
 export type Data = {
   Similar: {
@@ -27,20 +28,28 @@ const App = () => {
     const data = await axios(proxy, {
       method: "POST",
       data: {
-        urlToGet: `https://tastedive.com/api/similar?q=${url}&verbose=1&k=441672-Medialou-E81PF3PL`,
+        urlToGet: `https://tastedive.com/api/similar?q=${url}&verbose=1&type=music&k=441672-Medialou-E81PF3PL`,
       },
     });
     setData(data.data);
   };
 
+  const handleClick = () => {
+    handleContent(search);
+  };
+
+  //using no-clip-path class on search to animate clip path
+  const mainStyles = data.Similar ? "main-cont no-clip-path" : "main-cont";
+
   return (
-    <div className="main-cont">
+    <div className={mainStyles}>
       <Heading />
-      <div className="input-btn-cont">
+      <div className="input-cont">
         <Input onChange={handleChange} />
-        <Button onClick={() => handleContent(search)}>Search</Button>
+        <Button onClick={handleClick}>Search</Button>
       </div>
-      <SearchCard data={data} />
+      {data.Similar && <SearchCard data={data} />}
+      <ChangeTheme />
     </div>
   );
 };

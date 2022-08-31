@@ -8,14 +8,34 @@
   box-sizing: border-box;
   border: 0 none;
   outline: 0 none;
-  color: #cccccc;
   --poppins: "Poppins", sans-serif;
   --lato: "Lato", sans-serif;
   --hind: "Hind Madurai", sans-serif;
+  color: var(--color-font);
 }
 
 body {
-  background-color: #181a1b;
+  background-image: url("./assets/hendrix-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: -25em -15em;
+  color: var(--color-font);
+  /*light theme */
+  --color-font: #222222;
+  --color-background: #fff;
+}
+
+/*dark theme */
+@media (prefers-color-scheme: dark) {
+  body {
+    --color-font: #cccccc;
+    --color-background: #181a1b;
+  }
+}
+
+/* to toggle dark mode on site */
+.light-theme {
+  --color-font: #222222;
+  --color-background: #fff;
 }
 
 ul {
@@ -44,18 +64,35 @@ input {
 }
 
 .main-cont,
-.input-btn-cont {
+.input-cont {
   display: flex;
   flex-direction: column;
 }
 
 .main-cont {
+  background-color: var(--color-background);
+  clip-path: polygon(57% 0, 100% 0, 100% 100%, 0 100%, 0 70%);
+  z-index: 1;
   align-items: center;
   justify-content: center;
+  min-width: 100%;
   min-height: 100vh;
 }
 
-.input-btn-cont {
+@keyframes polygon {
+  0% {
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+  }
+  100% {
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%, 0 0%);
+  }
+}
+
+.no-clip-path {
+  animation: polygon 500ms 1 forwards ease-in-out;
+}
+
+.input-cont {
   gap: 0.5rem;
 }
 
@@ -65,8 +102,12 @@ input {
   }
 }
 /* Prevent scaling beyond this breakpoint */
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
   :root {
     font-size: 24px;
+  }
+
+  body {
+    background-position: -18em -10em;
   }
 }

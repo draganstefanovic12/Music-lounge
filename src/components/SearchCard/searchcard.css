@@ -1,9 +1,21 @@
 .recommendation-cont {
-  padding: 1rem;
+  display: flex;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  width: 75%;
+  animation: fadein 500ms 1 forwards ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .recommendation-cont > div {
-  display: flex;
   align-items: center;
   gap: 1rem;
 }
@@ -12,11 +24,6 @@
   font-size: 18px;
 }
 
-.search-grid-cont {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-}
-
-.yt-logo {
-  height: 1rem;
+.spot {
+  height: 1.2rem;
 }
