@@ -1,0 +1,22 @@
+.recommendation-cont {
+  padding: 1rem;
+}
+
+.recommendation-cont > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.recommendation-cont > p {
+  font-size: 18px;
+}
+
+.search-grid-cont {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.yt-logo {
+  height: 1rem;
+}

@@ -61,7 +61,7 @@ input {
 
 @media (min-width: 768px) {
   :root {
-    font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+    font-size: calc(1rem + ((1vw - 9.68px) * 0.6944));
   }
 }
 /* Prevent scaling beyond this breakpoint */

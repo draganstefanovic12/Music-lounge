@@ -6,5 +6,5 @@ type InputProps = {
 };
 
 export const Input = ({ onChange }: InputProps) => {
-  return <input />;
+  return <input onChange={onChange} />;
 };
