@@ -1,9 +1,17 @@
+.search-grid-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .recommendation-cont {
   display: flex;
-  margin: 0 auto;
   padding: 0.5rem 1rem;
   width: 75%;
   animation: fadein 1000ms 1 forwards ease-in-out;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 0.5rem;
+  margin: 1rem 0rem;
 }
 
 @keyframes fadein {
