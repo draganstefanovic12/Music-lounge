@@ -2,6 +2,8 @@ import "./changetheme.css";
 import { useEffect, useState } from "react";
 import lightTheme from "../../assets/sun.svg";
 import darkTheme from "../../assets/moon.svg";
+import githubDark from "../../assets/githubDark.svg";
+import githubLight from "../../assets/githubLight.svg";
 
 export const ChangeTheme = () => {
   const [theme, setTheme] = useState(false);
@@ -13,12 +15,22 @@ export const ChangeTheme = () => {
       : setTheme(true);
   }, []);
 
-  const toggleTheme = () => {
+  const handleTheme = () => {
     document.body.classList.toggle("light-theme");
     setTheme(!theme);
   };
 
-  const src = theme ? darkTheme : lightTheme;
+  const handleGithub = () => {
+    window.open("https://github.com/draganstefanovic12");
+  };
 
-  return <img onClick={toggleTheme} alt="theme" className="theme" src={src} />;
+  const src = theme ? darkTheme : lightTheme;
+  const githubSrc = theme ? githubLight : githubDark;
+
+  return (
+    <div className="theme">
+      <img onClick={handleGithub} src={githubSrc} alt="github-ico" />
+      <img onClick={handleTheme} alt="theme" src={src} />
+    </div>
+  );
 };

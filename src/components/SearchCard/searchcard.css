@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0.5rem 1rem;
   width: 75%;
-  animation: fadein 500ms 1 forwards ease-in-out;
+  animation: fadein 1000ms 1 forwards ease-in-out;
 }
 
 @keyframes fadein {

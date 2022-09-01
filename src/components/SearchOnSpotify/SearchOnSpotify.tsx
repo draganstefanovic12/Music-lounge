@@ -14,10 +14,14 @@ type Image = {
   url: string;
 };
 
-//Using my hosted backend to not show my spotify API key
+type SpotifySearchProps = {
+  search: string;
+};
+
+//using my already hosted backend to request a new token if the current one expired
 const api = `https://chatapp-backend-kyo.herokuapp.com/spotify`;
 
-export const SearchOnSpotify = ({ search }: { search: string }) => {
+export const SearchOnSpotify = ({ search }: SpotifySearchProps) => {
   const [spotifyData, setSpotifyData] = useState<SpotifyData>();
 
   useEffect(() => {
@@ -32,7 +36,10 @@ export const SearchOnSpotify = ({ search }: { search: string }) => {
     window.open(spotifyData?.external_urls.spotify);
   };
 
-  const artistImg = spotifyData && spotifyData.images[1].url;
+  const artistImg =
+    spotifyData && spotifyData?.images.length > 0
+      ? spotifyData!.images[0].url
+      : "none";
 
   return (
     <div onClick={handleClick} className="spotify-cont">

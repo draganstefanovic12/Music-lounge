@@ -1,6 +1,16 @@
 .theme {
+  display: flex;
   position: absolute;
   top: 1.5%;
   right: 1%;
   cursor: pointer;
+  gap: 0.5rem;
+}
+
+.theme > img {
+  height: 1rem;
+}
+
+.github-light {
+  color: #fff;
 }

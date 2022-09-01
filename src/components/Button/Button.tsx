@@ -6,5 +6,9 @@ type ButtonProps = {
 };
 
 export const Button = ({ onClick, children }: ButtonProps) => {
-  return <button onClick={onClick}>{children}</button>;
+  return (
+    <button type="submit" onClick={onClick}>
+      {children}
+    </button>
+  );
 };

@@ -10,7 +10,6 @@ export type Recommendation = {
   Name: string;
   Type: string;
   wTeaser: string;
-  yUrl?: string;
 };
 
 export const SearchCard = ({ data }: SearchCardProps) => {

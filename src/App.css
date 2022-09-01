@@ -8,34 +8,35 @@
   box-sizing: border-box;
   border: 0 none;
   outline: 0 none;
+  color: var(--color-font);
   --poppins: "Poppins", sans-serif;
   --lato: "Lato", sans-serif;
   --hind: "Hind Madurai", sans-serif;
-  color: var(--color-font);
 }
 
 body {
   background-image: url("./assets/hendrix-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: -25em -15em;
+  background-position: -18em -9.1em;
   color: var(--color-font);
-  /*light theme */
-  --color-font: #222222;
+  /* light theme */
+  --color-font: #181a1b;
   --color-background: #fff;
 }
 
-/*dark theme */
+/* dark theme */
 @media (prefers-color-scheme: dark) {
   body {
     --color-font: #cccccc;
     --color-background: #181a1b;
+    --btn-color: #cccccc;
   }
 }
 
-/* to toggle dark mode on site */
+/* theme change on click */
 .light-theme {
-  --color-font: #222222;
+  --color-font: #000;
   --color-background: #fff;
+  --btn-color: #fff;
 }
 
 ul {
@@ -61,6 +62,14 @@ button,
 li,
 input {
   font-family: var(--hind);
+}
+
+button {
+  color: var(--btn-color);
+}
+
+input {
+  outline: var(--color-font) 1px solid;
 }
 
 .main-cont,
@@ -107,7 +116,7 @@ input {
     font-size: 24px;
   }
 
-  body {
-    background-position: -18em -10em;
+  .body {
+    background-position: -18em -9.1em;
   }
 }

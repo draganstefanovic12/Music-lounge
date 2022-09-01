@@ -1,4 +1,4 @@
-import "./app.css";
+import "./App.css";
 import axios from "axios";
 import { Input } from "./components/Input/Input";
 import { Button } from "./components/Button/Button";
@@ -45,7 +45,7 @@ const App = () => {
     <div className={mainStyles}>
       <Heading />
       <div className="input-cont">
-        <Input onChange={handleChange} />
+        <Input handleClick={handleClick} onChange={handleChange} />
         <Button onClick={handleClick}>Search</Button>
       </div>
       {data.Similar && <SearchCard data={data} />}
