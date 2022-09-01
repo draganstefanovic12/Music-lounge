@@ -3,7 +3,7 @@ import axios from "axios";
 import { Input } from "./components/Input/Input";
 import { Button } from "./components/Button/Button";
 import { Heading } from "./components/Heading/Heading";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Recommendation, SearchCard } from "./components/SearchCard/SearchCard";
 import { ChangeTheme } from "./components/ChangeTheme/ChangeTheme";
 

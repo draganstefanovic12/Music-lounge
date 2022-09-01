@@ -35,3 +35,11 @@
 .spot {
   height: 1.2rem;
 }
+
+/* mobile/tablet optimization */
+@media (max-width: 768px) {
+  .recommendation-cont {
+    width: 90%;
+    display: block;
+  }
+}
