@@ -16,7 +16,7 @@
 
 body {
   background-image: url("./assets/hendrix-bg.jpg");
-  background-position: -18em -9.1em;
+  background-position: -18em -15em;
   color: var(--color-font);
   /* light theme */
   --color-font: #181a1b;
