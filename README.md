@@ -9,7 +9,7 @@ Tech stack used:
 - React
 - TypeScript
 
-<a href="https://draganstefanovic12.github.io/music-lounge/">Live Project</a>
+<a href="https://draganstefanovic12.github.io/Music-lounge/">Live Project</a>
 
 ![alt text](https://i.imgur.com/MdTNil7.png)
 ![alt text](https://i.imgur.com/phmJs01.png)
