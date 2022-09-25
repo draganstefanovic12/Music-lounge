@@ -19,7 +19,7 @@ type SpotifySearchProps = {
 };
 
 //using my already hosted backend to request a new token if the current one expired
-const api = `https://chatapp-backend-kyo.herokuapp.com/spotify`;
+const api = `https://dragpersonalproj.xyz/chat-app/spotify`;
 
 export const SearchOnSpotify = ({ search }: SpotifySearchProps) => {
   const [spotifyData, setSpotifyData] = useState<SpotifyData>();
